@@ -32,7 +32,7 @@ socket.on('user', function(data){
    console.log('123');
  io.emit('user','data');
 
-  });
+   });
 
 
 
