@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+
+    <meta charset="utf-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+ </head>
+  <body>
+
+
+  <h3 id="text" style="position:absolute;left:50px;top:45px"> Interactive Web-Music</h3>
+
+
+ 
+     <BR><BR>     
+
+</body>
+
+    <script src="/socket.io/socket.io.js"></script>
+
+
+  <script >
+   
+ var socket = io();
+ var max_data =0;
+
+    socket.on('20', function(buffer) {
+      max_data = buffer.charCodeAt() - 98
+      document.getElementById("text").innerText = max_data;
+    });
+  
+</script>
+
+
+</html>
